@@ -1,0 +1,8 @@
+<template>
+    <lightning-card title="Create Record By Calling Apex Class">
+        <lightning-input label="Account Id" disabled value={recordId}></lightning-input>
+        <lightning-input label="Account Name" onchange={handleOnNameChange}></lightning-input>
+        <lightning-input label="Account Industry" onchange={handleOnIndustryChange}></lightning-input>
+        <lightning-button label="Create Account Record" variant="brand" onclick={handleOnClick}></lightning-button>
+    </lightning-card>
+</template>

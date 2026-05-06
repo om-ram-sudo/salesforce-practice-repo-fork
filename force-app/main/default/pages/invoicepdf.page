@@ -1,0 +1,59 @@
+<apex:page standardController="Account" renderAs="pdf">
+    <table>
+        <tr><th>Company Name : </th></tr><br></br>
+        <tr><td>Name : <apex:outputField value="{!Account.name}"/></td></tr>
+        <tr><td>Street : <apex:outputField value="{!Account.BillingStreet}"/></td></tr>
+        <tr><td>City, State : <apex:outputField value="{!Account.BillingCity}"/> ,<apex:outputField value="{!Account.BillingState}"/></td></tr>
+        <tr><td>Pincode : <apex:outputField value="{!Account.BillingPostalCode}"/></td></tr>
+        <tr><td>Phone : <apex:outputField value="{!Account.Phone}"/></td></tr>
+        <tr><td>Email : <apex:outputField value="{!Account.Email__c}"/></td></tr>
+    </table>
+    <br></br>
+    <br></br>
+    <br></br>
+    <table>
+    <tr>
+    <th>Billing Address</th>
+    <th style="color:#fff ; padding-left: 5px ; padding-right : 10px;">Blank Column</th>
+    <th>Shipping Address</th>
+    </tr>
+        <tr>
+        <td>Name : <apex:outputField value="{!Account.name}"/></td>
+        <td></td>
+        <td>Name : <apex:outputField value="{!Account.name}"/></td>
+        </tr>
+        <tr>
+        <td>Street : <apex:outputField value="{!Account.BillingStreet}"/></td>
+        <td></td>
+        <td>Street : <apex:outputField value="{!Account.ShippingStreet}"/></td>
+        </tr>
+        <tr>
+        <td>City, State : <apex:outputField value="{!Account.BillingCity}"/> ,<apex:outputField value="{!Account.BillingState}"/></td>
+        <td></td>
+        <td>City, State : <apex:outputField value="{!Account.ShippingCity}"/> ,<apex:outputField value="{!Account.ShippingState}"/></td>
+        </tr>
+        <tr>
+        <td>Pincode : <apex:outputField value="{!Account.BillingPostalCode}"/></td>
+        <td></td>
+        <td>Pincode : <apex:outputField value="{!Account.ShippingPostalCode}"/></td>
+        </tr>
+    </table>
+    <br></br>
+    <br></br>
+    <br></br>
+    <table>
+    <tr>
+        <th style="padding-left:5px; padding-right:100px;">Contact Name</th>
+    <th style="text-align:center; padding-left:5px; padding-right:100px;">Contact Phone</th>
+    <th style="text-align:center; padding-left:15px; padding-right:100px;">Contact Email</th>
+    </tr>
+    <apex:repeat value="{!Account.contacts}" var="ac">
+    <tr>
+    <td><apex:outputField value="{!ac.name}"/></td>
+    <td><apex:outputField value="{!ac.phone}"/></td>
+    <td><apex:outputField value="{!ac.email}"/></td>
+    </tr>
+    </apex:repeat>
+    </table>
+    
+</apex:page>

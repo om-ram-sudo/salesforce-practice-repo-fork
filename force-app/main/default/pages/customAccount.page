@@ -1,0 +1,66 @@
+<apex:page controller="customAccount">
+  <apex:form >
+      <apex:sectionHeader title="Custom Page" subtitle="Home"/>
+      <apex:pageBlock >
+      
+          <apex:pageBlockButtons >
+              <apex:commandButton value="save" action="{!save}"/>
+              <apex:commandButton value="cancel" action="{!cancel}"/>
+          </apex:pageBlockButtons>
+          
+          <apex:pageBlockSection title="Account Information" collapsible="false">
+              <apex:inputField value="{!acc.Name}"/>
+              <apex:inputField value="{!acc.Latest_Case_Number__c}"/>
+              <apex:inputField value="{!acc.ParentId}"/>
+              <apex:inputField value="{!acc.Latest_Opportunity_Amount__c}"/>
+              <apex:inputField value="{!acc.AccountNumber}"/>
+              <apex:inputField value="{!acc.Rating}"/>
+              <apex:inputField value="{!acc.Site}"/>
+              <apex:inputField value="{!acc.Phone}"/>
+              <apex:inputField value="{!acc.Type}"/>
+              <apex:inputField value="{!acc.Fax}"/>
+              <apex:inputField value="{!acc.Industry}"/>
+              <apex:inputField value="{!acc.Website}"/>
+              <apex:inputField value="{!acc.AnnualRevenue}"/>
+              <apex:inputField value="{!acc.Email__c}"/>
+              <apex:inputField value="{!acc.CurrencyIsoCode}"/>
+              <apex:inputField value="{!acc.TickerSymbol}"/>
+              <apex:inputField value="{!acc.Approval_Status__c}"/>
+              <apex:inputField value="{!acc.Ownership}"/>
+              <apex:inputField value="{!acc.Total_Number_Of_Contact_s__c}"/>
+              <apex:inputField value="{!acc.NumberOfEmployees}"/>
+              <apex:inputField value="{!acc.Is_Available__c}"/>
+              <apex:inputField value="{!acc.Sic}"/>
+              <apex:inputField value="{!acc.Deadline_Date__c}"/>
+              <apex:inputField value="{!acc.Copy_BillingAddress_To_Shipping_Address__c}"/>
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockSection title="Address Information" collapsible="false">
+              <apex:inputField value="{!acc.BillingStreet}"/>
+              <apex:inputField value="{!acc.ShippingStreet}"/>
+              <apex:inputField value="{!acc.BillingCity}"/>
+              <apex:inputField value="{!acc.ShippingCity}"/>
+              <apex:inputField value="{!acc.BillingPostalCode}"/>
+              <apex:inputField value="{!acc.ShippingPostalCode}"/>
+              <apex:inputField value="{!acc.BillingState}"/>
+              <apex:inputField value="{!acc.ShippingState}"/>
+              <apex:inputField value="{!acc.BillingCountry}"/>
+              <apex:inputField value="{!acc.ShippingCountry}"/>
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockSection title="Additional Information" collapsible="false">
+              <apex:inputField value="{!acc.CustomerPriority__c}"/>
+              <apex:inputField value="{!acc.SLA__c}"/>
+              <apex:inputField value="{!acc.SLAExpirationDate__c}"/>
+              <apex:inputField value="{!acc.SLASerialNumber__c}"/>
+              <apex:inputField value="{!acc.NumberofLocations__c}"/>
+              <apex:inputField value="{!acc.UpsellOpportunity__c}"/>
+              <apex:inputField value="{!acc.Active__c}"/>
+          </apex:pageBlockSection>
+          
+          <apex:pageBlockSection title="Description Information" collapsible="false">
+              <apex:inputTextarea value="{!acc.Description}"/>
+          </apex:pageBlockSection>
+      </apex:pageBlock>
+  </apex:form>
+</apex:page>

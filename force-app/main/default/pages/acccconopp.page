@@ -1,0 +1,42 @@
+<apex:page controller="acccconopp">
+
+     <apex:sectionHeader title="Account Contact Opportunity" subtitle="Custom Page Custom Controller"/>
+     
+     <apex:form >
+     
+         <apex:pageBlock >
+             
+             <apex:pageBlockButtons >
+                 <apex:commandButton value="Save" action="{!saveit}"/>
+                  <apex:commandButton value="Cancel" action="{!cancelit}"/>
+             </apex:pageBlockButtons>
+             
+             <apex:pageBlockSection title="Account Information">
+                 <apex:inputField value="{!acc.Name}"/>
+                 <apex:inputField value="{!acc.Type}"/>
+                 <apex:inputField value="{!acc.Phone}"/>
+                 <apex:inputField value="{!acc.AccountNumber}"/>
+                 <apex:inputField value="{!acc.Industry}"/>
+             </apex:pageBlockSection>
+             
+             <apex:pageBlockSection title="Contact Information">
+                 <apex:inputField value="{!con.LastName}"/>
+                 <apex:inputField value="{!con.Phone}"/>
+                 <apex:inputField value="{!con.Email}"/>
+                 <apex:inputField value="{!con.Title}"/>
+                 <apex:inputField value="{!con.Level__c}"/>
+             </apex:pageBlockSection>
+             
+             <apex:pageBlockSection title="Opportunity Information">
+                 <apex:inputField value="{!opp.Name}"/>
+                 <apex:inputField value="{!opp.StageName}"/>
+                 <apex:inputField value="{!opp.Type}"/>
+                 <apex:inputField value="{!opp.CloseDate}"/>
+                 <apex:inputField value="{!opp.Amount}"/>
+             </apex:pageBlockSection>
+         
+         </apex:pageBlock>
+         
+     </apex:form>
+     
+</apex:page>

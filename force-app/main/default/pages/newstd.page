@@ -1,0 +1,51 @@
+<apex:page standardController="Student1__c">
+
+        <apex:form >
+    
+            <apex:sectionHeader title="Student" subtitle="Using Standard Controller"/>
+    
+            <apex:pageBlock >
+    
+                <apex:pageBlockButtons >
+                    <apex:commandButton value="Save" action="{!Save}"/>
+                    <apex:commandButton value="Cancel" action="{!Cancel}"/>
+                </apex:pageBlockButtons>
+    
+                <apex:pageBlockSection title="Student General Information">
+                    <apex:inputField value="{!Student1__c.Name}"/>
+                    <apex:inputField value="{!Student1__c.Parent1__c}"/>
+                    <apex:inputField value="{!Student1__c.Present_Status__c}"/>
+                </apex:pageBlockSection>
+                
+                <apex:pageBlockSection title="Student Personal Information">
+                    <apex:inputField value="{!Student1__c.Gender__c}"/>
+                    <apex:inputField value="{!Student1__c.Date_Of_Birth__c}"/>
+                    <apex:inputField value="{!Student1__c.Age__c}"/>
+                </apex:pageBlockSection>
+                
+                <apex:pageBlockSection title="Student Contact Detail's">
+                    <apex:inputField value="{!Student1__c.Email__c}"/>
+                    <apex:inputField value="{!Student1__c.Phone_Number__c}"/>
+                </apex:pageBlockSection>
+                
+                <apex:pageBlockSection title="Student Course Details">
+                    <apex:inputField value="{!Student1__c.Student_ID__c}"/>
+                    <apex:inputField value="{!Student1__c.Registration_Date_Time__c}"/>
+                    <apex:inputField value="{!Student1__c.Course__c}"/>
+                    <apex:inputField value="{!Student1__c.Course_Start_Date__c}"/>
+                    <apex:inputField value="{!Student1__c.Student_ID__c}"/>
+                    <apex:inputField value="{!Student1__c.Upload_Resume__c}"/>
+                </apex:pageBlockSection>
+                
+                <apex:pageBlockSection title="Student Fees Details">
+                    <apex:inputField value="{!Student1__c.X1st_Installment__c}"/>
+                    <apex:inputField value="{!Student1__c.Discount__c}"/>
+                    <apex:inputField value="{!Student1__c.X2nd_Installment__c}"/>
+                    <apex:inputField value="{!Student1__c.Tax__c}"/>
+                </apex:pageBlockSection>
+    
+    </apex:pageBlock>
+    
+    </apex:form>
+    
+</apex:page>

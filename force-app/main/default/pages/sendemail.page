@@ -1,0 +1,13 @@
+<apex:page controller="sendemail">
+  <apex:form >
+  <apex:pageBlock title="Send Email">
+  <apex:pageBlockButtons >
+  <apex:commandButton value="Send Email" action="{!sendmail}"/>
+  </apex:pageBlockButtons>
+  <apex:pageBlockSection >
+      <apex:inputText label="Subject" value="{!subject}"/>
+      <apex:inputTextarea label="Body" value="{!emailBody}"/>
+      </apex:pageBlockSection>
+  </apex:pageBlock>
+  </apex:form>
+</apex:page>

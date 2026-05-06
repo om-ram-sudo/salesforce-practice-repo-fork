@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="Magic Card">
+        <p>See the magic by pressing the below button</p>
+        <lightning-button label={onClickLabelChange} variant="brand" onclick={handleOnClick}></lightning-button>
+    </lightning-card>
+    <lightning-card title="Prasad Magic Card" if:true={cardVisible}>
+        <p><b>Magic Card</b></p>
+    </lightning-card>
+</template>

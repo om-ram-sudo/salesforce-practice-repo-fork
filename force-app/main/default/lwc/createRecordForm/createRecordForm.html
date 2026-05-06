@@ -1,0 +1,10 @@
+<template>
+   <lightning-card title="LWC - createRecord">
+        <lightning-input label="Account Id" disabled value={recordId}></lightning-input>
+        <lightning-input label="Account Name" onchange={handleOnNameChange}></lightning-input>
+        <lightning-input label="Account Email" onchange={handleOnEmailChange}></lightning-input>
+        <lightning-input label="Account Phone" onchange={handleOnPhoneChange}></lightning-input>
+        <lightning-input label="Account Type" onchange={handleOnTypeChange}></lightning-input>
+        <lightning-button label="Create Record" variant="brand" onclick={handleOnClick}></lightning-button>
+   </lightning-card>
+</template>

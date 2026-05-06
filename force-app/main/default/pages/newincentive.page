@@ -1,0 +1,21 @@
+<apex:page controller="newincentive">
+
+    <apex:sectionHeader title="Incentive" subtitle="Using Custom Controller"/>
+     <apex:form >
+         
+         <apex:pageBlock >
+             <apex:pageBlockButtons >
+                 <apex:commandButton value="Save" action="{!saverec}"/>
+                 <apex:commandButton value="Cancel" action="{!cancelrec}"/>
+             </apex:pageBlockButtons>
+         
+             <apex:pageBlockSection title="Incentive">
+                 <apex:inputField value="{!inc.Incentive__c}"/>
+                  <apex:inputField value="{!inc.Incentive_Amount__c}"/>
+                   <apex:inputField value="{!inc.Type__c}"/>
+                    <apex:inputField value="{!inc.Date__c}"/>
+             </apex:pageBlockSection>
+             
+         </apex:pageBlock>
+     </apex:form>
+</apex:page>

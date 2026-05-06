@@ -1,0 +1,60 @@
+<apex:page controller="applepdf" renderAs="pdf">
+  <table>
+        <tr><th>Company Name : <apex:outputField value="{!quote[0].Account__r.Name}"/></th></tr><br></br>
+        <tr><td>Name : <apex:outputField value="{!quote[0].Account__r.Name}"/></td></tr>
+       <tr><td>Street : <apex:outputField value="{!quote[0].Account__r.BillingStreet}"/></td></tr>
+        <tr><td>City, State : <apex:outputField value="{!quote[0].Account__r.BillingCity}"/> ,<apex:outputField value="{!quote[0].Account__r.BillingState}"/></td></tr>
+        <tr><td>Pincode : <apex:outputField value="{!quote[0].Account__r.BillingPostalCode}"/></td></tr>
+        <tr><td>Phone : <apex:outputField value="{!quote[0].Account__r.Phone}"/></td></tr>
+        <tr><td>Email : <apex:outputField value="{!quote[0].Account__r.Email__c }"/></td></tr>
+    </table>
+     <br></br>
+    <br></br>
+    <br></br>
+    <table>
+    <tr>
+    <th>Billing Address</th>
+    <th style="color:#fff ; padding-left: 5px ; padding-right : 10px;">Blank Column</th>
+    <th>Shipping Address</th>
+    </tr>
+        <tr>
+        <td>Name : <apex:outputField value="{!quote[0].Account__r.Name}"/></td>
+        <td></td>
+        <td>Name : <apex:outputField value="{!quote[0].Account__r.Name}"/></td>
+        </tr>
+        <tr>
+        <td>Street : <apex:outputField value="{!quote[0].Account__r.BillingStreet}"/></td>
+        <td></td>
+        <td>Street : <apex:outputField value="{!quote[0].Account__r.BillingStreet}"/></td>
+        </tr>
+        <tr>
+        <td>City, State : <apex:outputField value="{!quote[0].Account__r.BillingCity}"/> ,<apex:outputField value="{!quote[0].Account__r.BillingState}"/></td>
+        <td></td>
+        <td>City, State : <apex:outputField value="{!quote[0].Account__r.BillingCity}"/> ,<apex:outputField value="{!quote[0].Account__r.BillingState}"/></td>
+        </tr>
+        <tr>
+        <td>Pincode : <apex:outputField value="{!quote[0].Account__r.BillingPostalCode}"/></td>
+        <td></td>
+        <td>Pincode : <apex:outputField value="{!quote[0].Account__r.BillingPostalCode}"/></td>
+        </tr>
+    </table> 
+    <br></br>
+    <br></br>
+    <br></br>
+    <table>
+    <tr>
+        <th style="padding-left:5px; padding-right:100px;">Product Name</th>
+        <th style="padding-left:15px; padding-right:50px;">Quantity</th>
+    <th style="text-align:center; padding-left:25px; padding-right:50px;">Unit Cost</th>
+    <th style="text-align:center; padding-left:15px; padding-right:50px;">Amount</th>
+    </tr>
+    <apex:repeat value="{!qli}" var="qline">
+    <tr>
+    <td style="padding-left:5px; padding-right:100px;"><apex:outputField value="{!qline.Pproduct__r.name}"/></td>
+    <td style="padding-left:15px; padding-right:50px;"><apex:outputField value="{!qline.Quantity__c}"/></td>
+    <td style="text-align:center; padding-left:25px; padding-right:50px;"><apex:outputField value="{!qline.Unit_Cost__c}"/></td>
+    <td style="text-align:center; padding-left:15px; padding-right:50px;"><apex:outputField value="{!qline.Amount__c}"/></td>
+    </tr>
+    </apex:repeat> 
+    </table>
+</apex:page>

@@ -1,0 +1,24 @@
+<apex:page controller="newAccConEdit" >
+ <apex:form >
+ <apex:pageBlock title="Contact">
+ <apex:pageBlockButtons >
+ <apex:commandButton value="Update" action="{!updateIt}"/>
+ <apex:commandButton value="Cancel" action="{!cancelIt}"/>
+ </apex:pageBlockButtons>
+ <apex:pageBlockTable value="{!contacts}" var="contact">
+ <apex:column headerValue="ID">
+ <apex:outputField value="{!contact.ID}"/>
+ </apex:column>
+ <apex:column headerValue="Name">
+ <apex:inputText value="{!contact.Lastname}"/>
+ </apex:column>
+ <apex:column headerValue="Phone">
+ <apex:inputText value="{!contact.Phone}"/>
+ </apex:column>
+ <apex:column headerValue="Email">
+ <apex:inputText value="{!contact.Email}"/>
+ </apex:column>
+ </apex:pageBlockTable>
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

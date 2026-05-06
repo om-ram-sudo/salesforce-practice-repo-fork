@@ -1,0 +1,10 @@
+<template>
+    <lightning-card title="Track Decorator">
+        <lightning-input label="First Name" name="firstName" onchange={handleOnChange}></lightning-input>
+        <lightning-input label="Last Name" name="lastName" onchange={handleOnChange}></lightning-input>
+    </lightning-card>
+    <lightning-card title="Entered Details">
+        <p>First Name : <b>{fullName.fname}</b></p>
+        <p>Last Name : <b>{fullName.lname}</b></p>
+    </lightning-card>
+</template>

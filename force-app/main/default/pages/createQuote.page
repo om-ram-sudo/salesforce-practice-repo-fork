@@ -1,0 +1,51 @@
+<apex:page controller="createQuote">
+
+    <apex:form >
+    
+        <apex:sectionHeader title="Create Quote And Quote Line Item" subtitle="Using Controller"/>
+    
+            <apex:pageBlock >
+            
+                <apex:pageBlockButtons >
+                    <apex:commandButton value="Save" action="{!saveit}"/>
+                    <apex:commandButton value="Cancel" action="{!cancel}"/>
+                </apex:pageBlockButtons>
+                
+                <apex:pageBlockSection title="Quote Data">
+                    <apex:outputField value="{!qot.Account__c}"/>
+                    <apex:outputField value="{!qot.Contact__c}"/>
+                    <apex:outputField value="{!qot.Oopportunity__c}"/>
+                </apex:pageBlockSection>
+                
+                <apex:pageBlockSection title="Quote Line Item Data">
+                
+                <apex:pageBlockTable value="{!qlineitemlist}" var="qli">
+                
+                    <apex:column headerValue="Product">
+                        <apex:outputField value="{!qli.Pproduct__c}"/>
+                    </apex:column>
+                    
+                    <apex:column headerValue="Quantity">
+                        <apex:outputField value="{!qli.Pproduct__c}"/>
+                    </apex:column>
+                    
+                    <apex:column headerValue="Unit Price">
+                        <apex:outputField value="{!qli.Pproduct__c}"/>
+                    </apex:column>
+                    
+                    <apex:column headerValue="Discount">
+                        <apex:outputField value="{!qli.Pproduct__c}"/>
+                    </apex:column>
+                    
+                    <apex:column headerValue="Discount Amount">
+                        <apex:outputField value="{!qli.Pproduct__c}"/>
+                    </apex:column>
+                    
+                </apex:pageBlockTable>
+                
+                </apex:pageBlockSection>
+            </apex:pageBlock>
+            
+    </apex:form>
+    
+</apex:page>

@@ -1,0 +1,30 @@
+<apex:page controller="newaddremove">
+
+     <apex:sectionHeader title="Add Remove" subtitle="Using Controller"/>
+     
+         <apex:form >
+     
+            <apex:pageBlock >
+     
+                 <apex:pageBlockButtons >
+                     <apex:commandButton value="Add Record" action="{!addrec}" />
+                     <apex:commandButton value="Remove Record" action="{!removerec}"/>
+                 </apex:pageBlockButtons>
+     
+                 <apex:pageBlockSection title="Data Entry Section">
+                     <apex:inputText label="Enter Data : " html-placeHolder="enter text here" value="{!container}" />
+                 </apex:pageBlockSection>
+                 
+                 <apex:pageBlockSection title="Record Section">
+                 <apex:pageBlockTable value="{!slist}" var="lisval">
+                     <apex:column headerValue="Record List">
+                         <apex:outputText value="{!lisval}" />
+                     </apex:column>
+                 </apex:pageBlockTable>
+                 </apex:pageBlockSection>
+                 
+            </apex:pageBlock>
+     
+     </apex:form>
+     
+</apex:page>
