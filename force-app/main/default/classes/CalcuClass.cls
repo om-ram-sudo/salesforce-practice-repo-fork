@@ -5,5 +5,8 @@ public with sharing class CalcuClass {
 public integer removeThreeNumber(integer num1, integer num2, integer num3){
         return num1 - num2 - num3;
     }
+    public integer multiplayThreeNumber(integer num1, integer num2, integer num3){
+        return num1 * num2 * num3;
+    }
    
 }
